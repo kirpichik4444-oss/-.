@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Фурри — жанр</title>
+
+<style>
+:root {
+  --accent: #a0ffcc; 
+  --text-color: #f5f5f5;
+  --bg-image: url('https://i.ytimg.com/vi/zZtx4swbsvs/maxresdefault.jpg'); /* тута фон страницы */
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--text-color);
+  background: var(--bg-image) no-repeat center center fixed;
+  background-size: cover;
+  padding: 40px;
+  position: relative;
+}
+
+/* Фоновый полупрозрачный контейнер */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.55);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+/* Анимация появления текста */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+.fade-in.delay1 { animation-delay: 0.3s; }
+.fade-in.delay2 { animation-delay: 0.6s; }
+.fade-in.delay3 { animation-delay: 0.9s; }
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+h1 {
+  text-align: center;
+  color: var(--accent);
+  font-size: 2.5rem;
+  text-shadow: 0 0 12px rgba(160,255,204,0.7);
+}
+
+h3 {
+  color: var(--accent);
+  text-shadow: 0 0 8px rgba(160,255,204,0.4);
+  margin-top: 30px;
+}
+
+p { line-height: 1.6; font-size: 1.1rem; text-shadow:1px 1px 3px rgba(0,0,0,0.5); }
+
+a.button {
+  display:inline-block; margin:20px 10px 0 0; padding:10px 18px;
+  border-radius:10px; background: rgba(160,255,204,0.15);
+  border:1px solid rgba(160,255,204,0.5); color:var(--accent);
+  text-decoration:none; font-weight:600; transition:background 0.3s, transform 0.2s;
+}
+a.button:hover { background: rgba(160,255,204,0.3); transform:scale(1.05); }
+a.button:active { transform: scale(0.95); }
+
+/* Разделители между блоками */
+hr.decor {
+  border: none;
+  height: 2px;
+  background: rgba(255,255,255,0.2);
+  margin: 30px 0;
+  border-radius: 1px;
+}
+
+/* Тени для картинок */
+img {
+  box-shadow: 0 0 25px rgba(255,255,255,0.3);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 12px;
+}
+
+/* Статичные кляксы, лужи и пузырьки в центре */
+.splotch {
+  position:absolute; border-radius:50%; opacity:0.2; background: radial-gradient(circle at 30% 30%, white, transparent 70%);
+  pointer-events: none;
+}
+.s1 { width:250px;height:200px;top:5%;left:5%; }
+.s2 { width:300px;height:250px;bottom:10%;right:10%; }
+.s3 { width:180px;height:150px;top:60%;left:40%; }
+.s4 { width:220px;height:180px;top:30%;right:30%; }
+.s5 { width:150px;height:130px;bottom:25%;left:20%; }
+
+/* Статичные боковые кляксы */
+.side-splotch {
+  position: fixed;
+  width: 80px;
+  height: 150px;
+  background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 0;
+}
+.left1 { left: 0; top: 20%; transform: rotate(15deg); }
+.left2 { left: 0; top: 50%; transform: rotate(-10deg); }
+.right1 { right: 0; top: 10%; transform: rotate(-20deg); }
+.right2 { right: 0; top: 60%; transform: rotate(10deg); }
+
+</style>
+</head>
+<body>
+
+<!-- Центральные кляксы -->
+<div class="splotch s1"></div>
+<div class="splotch s2"></div>
+<div class="splotch s3"></div>
+<div class="splotch s4"></div>
+<div class="splotch s5"></div>
+
+<!-- Боковые кляксы -->
+<div class="side-splotch left1"></div>
+<div class="side-splotch left2"></div>
+<div class="side-splotch right1"></div>
+<div class="side-splotch right2"></div>
+
+<div class="container">
+<h1 class="fade-in delay1">Фурри</h1>
+
+<!-- Верхняя вертикальная картинка -->
+<img src="https://preview.redd.it/m4a-not-a-furry-but-i-love-furry-hentai-i-am-hoping-to-trade-v0-iahgkhvpq89d1.jpg?width=640&crop=smart&auto=webp&s=1095891f146f036fe8950db9690650d59b54f76c" alt="" class="fade-in delay2" style="display:block;margin:20px auto;width:500px;max-width:100%;">
+
+<h3 class="fade-in delay3">Описание жанра</h3>
+<p class="fade-in delay3">
+Фурри — жанр и культурное движение, связанное с антропоморфными персонажами, имеющими черты животных. В произведениях фурри персонажи могут иметь человеческие эмоции, одежду, возможности и поведение. Сюжеты включают приключения, дружбу, юмор, романтику и иногда эротические сцены. Жанр ценится за художественный стиль, дизайн персонажей и взаимодействие между ними, вызывающее эмоциональную привязанность аудитории.
+</p>
+
+<hr class="decor">
+
+<!-- Нижняя горизонтальная картинка -->
+<img src="https://ua.xxxi.porn/contents/videos_screenshots/78000/78733/642x361/1.jpg" alt="" class="fade-in delay2" style="display:block;margin:20px auto;width:1000px;max-width:100%;">
+
+<!-- Кнопка видео -->
+<a href="https://noodlemagazine.com/watch/-177530701_456239598" class="button fade-in delay3">Утэнга Геннадий</a>
+
+</div>
+</body>
+</html>

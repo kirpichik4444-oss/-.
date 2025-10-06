@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Яой / BL</title>
+
+<style>
+/* ======== Основные стили страницы ======== */
+body{
+  font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;
+  margin:0;
+  padding:24px;
+  color:#fff;
+  /* Фон страницы - замените ссылку на вашу картинку */
+  background:url('https://i.xgroovy.com/contents/videos_screenshots/594000/594081/608x342/1.jpg') no-repeat center center fixed;
+  background-size:cover;
+  position:relative;
+}
+
+/* Контейнер для текста и картинок */
+.container{
+  max-width:980px;
+  margin:0 auto;
+  background: rgba(0,0,0,0.4); /* полупрозрачный фон для читаемости текста */
+  padding:20px;
+  border-radius:12px;
+  backdrop-filter: blur(6px); /* размывает фон за контейнером */
+}
+
+/* Заголовок H1 */
+h1{
+  font-size:2rem;
+  margin-bottom:16px;
+  color:#ffd; /* цвет заголовка */
+  text-shadow:2px 2px 6px rgba(0,0,0,0.8); /* тень для читаемости */
+}
+
+/* Подзаголовок H3 */
+h3{
+  font-size:1.2rem;
+  margin-top:12px;
+  color:#fff;
+  text-shadow:1px 1px 3px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.3); /* полупрозрачный фон под подзаголовком */
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:6px;
+}
+
+/* Кнопка видосик */
+a.button{
+  display:inline-block;
+  margin-top:12px;
+  padding:8px 12px;
+  border-radius:8px;
+  background:rgba(154,214,255,0.15);
+  border:1px solid rgba(154,214,255,0.5);
+  color:#9ad6ff;
+  text-decoration:none;
+  font-weight:600;
+}
+a.button:hover{
+  background:rgba(154,214,255,0.25);
+  transform:scale(1.05);
+}
+
+/* ======== Кляксы на фоне ======== */
+.droplet{
+  position:absolute;
+  background:rgba(255,255,255,0.6); /* цвет кляксы */
+  pointer-events:none; /* чтобы кляксы не мешали кликам */
+  border-radius:50%; /* форма обычной кляксы */
+  mix-blend-mode:screen; /* чтобы кляксы выглядели ярче на фоне */
+}
+
+/* Некоторые кляксы можно сделать "лужами" */
+.liquiddroplet{
+  border-radius:50% 70% 60% 40%; /* более жидкая форма */
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <!-- Заголовок страницы -->
+  <h1>Яой / BL</h1>
+
+  <!-- Подзаголовок -->
+  <h3>Жанр манги и аниме, показывающий романтические и сексуальные отношения между мужчинами.</h3>
+
+  <!-- Основной текст -->
+  <p>
+    Яой ориентирован в основном на женскую аудиторию и сосредоточен на чувствах и отношениях мужских персонажей. 
+    Сюжет может включать откровенные сцены, но степень откровенности зависит от произведения. 
+    Жанр возник из додзинси и стал популярным в манге, аниме и играх.
+  </p>
+
+  <!-- Примеры картинок -->
+  <img src="https://imgcover.manga-chan.me//showfull_retina/uploads/posts/2017-03/thumbs/1488616279_01.jpg" width="500" alt="Картинка"> <img src="https://xxx-premium.com/uploads/posts/2025-04/1743944559_1.webp" width="500" alt="картинка">
+  <img src="https://ic-vt-nss.xhcdn.com/a/ZjVlNTYyMjMzZjJmMTY0YWIwZjhhMjdjYWExY2I2NzY/s(w:2560,h:1440),webp/007/625/246/v2/2560x1440.208.webp" width="1000" alt="Картинка">
+
+  <!-- Кнопка для видео -->
+  <br>
+  <a href="https://noodlemagazine.com/watch/-190918406_456239180" class="button">Видосик</a>
+</div>
+
+<script>
+/* ======== Генерация клякс на фоне ======== */
+const dropletCount = 20; // количество клякс
+for(let i=0;i<dropletCount;i++){
+  const droplet=document.createElement('div'); 
+  droplet.className='droplet';
+
+  // каждая третья клякса - жидкая лужица
+  if(i%3===0) droplet.classList.add('liquiddroplet');
+
+  // случайный размер
+  const size=Math.random()*60+20; // 20-80px
+  droplet.style.width=size+'px';
+  droplet.style.height=size+'px';
+
+  // случайная позиция
+  droplet.style.left=Math.random()*100+'vw';
+  droplet.style.top=Math.random()*100+'vh';
+
+  // случайная прозрачность и поворот
+  droplet.style.opacity=0.3+Math.random()*0.5;
+  droplet.style.transform=`rotate(${Math.random()*360}deg)`;
+
+  // добавляем кляксу на страницу
+  document.body.appendChild(droplet);
+}
+</script>
+</body>
+</html>

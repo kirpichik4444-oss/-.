@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Лоли — жанр</title>
+
+<style>
+:root {
+  --accent: #ff99cc; 
+  --text-color: #f5f5f5;
+  --bg-image: url('https://media.themoviedb.org/t/p/w780/13p82dezRW6kdHOGbqa0goMG0uO.jpg');
+}
+
+body {
+  margin: 0;
+  font-family: Inter, Arial, sans-serif;
+  color: var(--text-color);
+  background: var(--bg-image) no-repeat center center fixed;
+  background-size: cover;
+  padding: 40px;
+  position: relative;
+}
+
+/* Контейнер с прозрачностью и размытием */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+  background: rgba(0,0,0,0.55);
+  padding: 30px;
+  border-radius: 16px;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.6);
+}
+
+/* Анимация текста */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+.fade-in.delay1 { animation-delay: 0.3s; }
+.fade-in.delay2 { animation-delay: 0.6s; }
+.fade-in.delay3 { animation-delay: 0.9s; }
+
+@keyframes fadeInUp { to { opacity:1; transform:translateY(0); } }
+
+h1 { text-align:center; color:var(--accent); font-size:2.5rem; text-shadow:0 0 12px rgba(255,153,204,0.7); }
+h3 { color:var(--accent); text-shadow:0 0 8px rgba(255,153,204,0.4); margin-top:30px; }
+p { line-height:1.6; font-size:1.1rem; text-shadow:1px 1px 3px rgba(0,0,0,0.5); }
+
+a.button {
+  display:inline-block; margin:20px 10px 0 0; padding:10px 18px;
+  border-radius:10px; background: rgba(255,153,204,0.15);
+  border:1px solid rgba(255,153,204,0.5); color:var(--accent);
+  text-decoration:none; font-weight:600; transition:background 0.3s, transform 0.2s;
+}
+a.button:hover { background: rgba(255,153,204,0.3); transform:scale(1.05); }
+a.button:active { transform: scale(0.95); }
+
+hr.decor { border:none; height:2px; background: rgba(255,255,255,0.2); margin:30px 0; border-radius:1px; }
+img { box-shadow:0 0 25px rgba(255,255,255,0.3); border:2px solid rgba(255,255,255,0.2); border-radius:12px; }
+
+/* Центральные кляксы */
+.splotch { position:absolute; border-radius:50%; opacity:0.2; background: radial-gradient(circle at 30% 30%, white, transparent 70%); pointer-events:none; }
+.s1 { width:250px;height:200px;top:5%;left:5%; }
+.s2 { width:300px;height:250px;bottom:10%;right:10%; }
+.s3 { width:180px;height:150px;top:60%;left:40%; }
+.s4 { width:220px;height:180px;top:30%;right:30%; }
+.s5 { width:150px;height:130px;bottom:25%;left:20%; }
+
+/* Боковые кляксы */
+.side-splotch { position: fixed; width: 80px; height: 150px; background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2), transparent 70%); border-radius:50%; pointer-events:none; z-index:0; }
+.left1 { left:0; top:20%; transform:rotate(15deg); }
+.left2 { left:0; top:50%; transform:rotate(-10deg); }
+.right1 { right:0; top:10%; transform:rotate(-20deg); }
+.right2 { right:0; top:60%; transform:rotate(10deg); }
+</style>
+</head>
+<body>
+
+<!-- Центральные кляксы -->
+<div class="splotch s1"></div>
+<div class="splotch s2"></div>
+<div class="splotch s3"></div>
+<div class="splotch s4"></div>
+<div class="splotch s5"></div>
+
+<!-- Боковые кляксы -->
+<div class="side-splotch left1"></div>
+<div class="side-splotch left2"></div>
+<div class="side-splotch right1"></div>
+<div class="side-splotch right2"></div>
+
+<div class="container">
+<h1 class="fade-in delay1">Лоли</h1>
+
+<!-- Первая вертикальная картинка сверху -->
+<img src="https://i1.sndcdn.com/avatars-QWVUH4GHX4GP4pAt-isi6MQ-t1080x1080.jpg" alt="Лоли 1" class="fade-in delay2" style="display:block;margin:20px auto;width:500px;max-width:100%;">
+
+<!-- Описание жанра -->
+<h3 class="fade-in delay3">Описание жанра</h3>
+<p class="fade-in delay3">Лоли — это жанр в аниме и манге, где персонажи изображены как маленькие девочки или подростки с выраженными чертами «милоты» (cute, moe). Сюжеты могут включать дружбу, юмор, романтику, приключения и эмоционально насыщенные сцены. В некоторых произведениях могут быть эротические элементы, но они не обязательны.</p>
+
+<p class="fade-in delay3">Визуальный стиль жанра подчёркивает милоту, хрупкость и эмоциональную выразительность персонажей. Лоли-жанр ценится за художественный стиль, дизайн персонажей и взаимодействия между ними, вызывающие эмоциональную привязанность.</p>
+
+<p class="fade-in delay3">Термин «Лоли» получил популярность в японской культуре аниме и манги с конца 1980-х годов. Он связан с эстетикой персонажей и особенностями фандома, где ценятся милые и привлекательные образы.</p>
+
+<hr class="decor">
+
+<!-- Остальные четыре картинки внизу -->
+<img src="https://pic.rutubelist.ru/video/2025-08-16/ac/82/ac82619a797ce192d490f8802f4a0950.jpg?size=l" alt="Лоли 2" class="fade-in delay2" style="display:block;margin:20px auto;width:1000px;max-width:100%;">
+<img src="https://images.kinorium.com/movie/shot/2638559/h280_53529699.jpg?21733078386" alt="Лоли 3" class="fade-in delay2" style="display:block;margin:20px auto;width:1000px;max-width:100%;">
+<img src="https://i.pinimg.com/564x/68/b3/f8/68b3f84b8a9e00cef8faf090e6f1976e.jpg" alt="Лоли 4" class="fade-in delay2" style="display:block;margin:20px auto;width:1000px;max-width:100%;">
+<img src="https://pm1.aminoapps.com/6898/a05485f25e52f82c4e0c60c4097e1df60c7a6326r1-854-480v2_hq.jpg" alt="Лоли 5" class="fade-in delay2" style="display:block;margin:20px auto;width:1000px;max-width:100%;">
+
+<!-- Кнопки видео -->
+<a href="https://noodlemagazine.com/watch/-213654728_456239235" class="button fade-in delay3">Чи тян</a>
+<a href="https://noodlemagazine.com/watch/-186780308_456239123" class="button fade-in delay3">Комако тян</a>
+<a href="https://noodlemagazine.com/watch/-186780308_456239426" class="button fade-in delay3">Тэнка тян</a>
+
+</div>
+</body>
+</html>
+

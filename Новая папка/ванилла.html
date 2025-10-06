@@ -1,0 +1,116 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Ванилла — Категория</title>
+<style>
+body{
+  font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;
+  margin:0;padding:24px;color:#fff;
+  background:url('https://photos.xgroovy.com/contents/albums/sources/101000/101401/97063.jpg') no-repeat center center fixed;
+  background-size:cover;
+  position:relative;
+}
+
+/* Контейнер текста с полупрозрачным фоном */
+.container{
+  max-width:980px;
+  margin:0 auto;
+  background: rgba(0,0,0,0.4); /* тута фон за текстом */
+  padding:20px;
+  border-radius:12px;
+  backdrop-filter: blur(6px);
+}
+
+/* Заголовок */
+h1{
+  font-size:2rem;
+  margin-bottom:16px;
+  color:#ffd; /* бежевый */
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8); /* тень для читаемости */
+}
+
+/* Подзаголовки */
+h3{
+  font-size:1.2rem;
+  margin-top:12px;
+  color:#fff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.3); /* полупрозрачный фон за h3 */
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:6px;
+}
+
+/* Ссылки */
+a.button{
+  display:inline-block;margin-top:12px;padding:8px 12px;border-radius:8px;
+  background:rgba(154,214,255,0.15);border:1px solid rgba(154,214,255,0.5);
+  color:#9ad6ff;text-decoration:none;font-weight:600;
+}
+a.button:hover{background:rgba(154,214,255,0.25);transform:scale(1.05);}
+
+/* Кляксы */
+.droplet{
+  position:absolute;
+  background:rgba(255,255,255,0.6);
+  pointer-events:none;
+  border-radius:50%;
+  mix-blend-mode: screen;
+}
+.liquiddroplet{border-radius:50% 70% 60% 40%;}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Ванилла</h1>
+  <h3>Романтические и мягкие сюжеты с фокусом на отношениях.<br>
+    В жанре хентая термин «ванилла» (от англ. vanilla) обозначает произведения, фокусирующиеся на романтических и сексуальных отношениях без элементов насилия, доминирования или садомазохизма. Этот жанр часто включает в себя милые, трогательные и эмоционально насыщенные сцены, ориентированные на чувства и интимность между персонажами.
+   <br>🔍 Основные особенности жанра «ванилла» в хентае:
+
+Романтический фокус: Основное внимание уделяется развитию отношений между персонажами, их эмоциям и взаимопониманию.
+
+Отсутствие насилия: В произведениях жанра «ванилла» отсутствуют сцены насилия, доминирования или садомазохизма.
+
+Эмоциональная насыщенность: Сюжеты часто включают трогательные и милые моменты, подчеркивающие чувства и интимность.
+
+Целевая аудитория: Жанр ориентирован на зрителей, ищущих более мягкие и романтические произведения в жанре хентая.<br>
+
+   🎮 Примеры произведений в жанре «ванилла»:
+
+NEKOPARA: Визуальная новелла, где изображены отношения между людьми и антропоморфными кошками в милой и романтической обстановке. 
+Steam Store
+
+Vanilla Taste: Манхва, рассказывающая о любовных отношениях в контексте романтики и чувств.
+  </h3>
+  <img src="https://photos.xgroovy.com/contents/albums/sources/98000/98922/94574.jpg" width="500" alt="Картинка жанра">
+  <img src="https://hamtictictic.com/contents/videos_screenshots/255000/255299/720x405/1.jpg"width="1000" alt="Картинка жанра">
+  
+  <br>
+  <a href="https://ukdevilz.com/watch/-144988231_456239225" class="button">Видосик</a>
+</div>
+
+<script>
+// Генерация клякс
+const dropletCount = 15; 
+for(let i=0;i<dropletCount;i++){
+  const droplet = document.createElement('div');
+  droplet.className = 'droplet';
+  
+  if(i % 3 === 0) droplet.classList.add('liquiddroplet'); // лужи
+  const size = Math.random()*60 + 20;
+  droplet.style.width = size + 'px';
+  droplet.style.height = size + 'px';
+  droplet.style.left = Math.random()*100 + 'vw';
+  droplet.style.top = Math.random()*100 + 'vh';
+  droplet.style.opacity = 0.3 + Math.random()*0.5;
+  droplet.style.transform = `rotate(${Math.random()*360}deg)`;
+  
+  document.body.appendChild(droplet);
+}
+</script>
+</body>
+</html>
+
+

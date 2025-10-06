@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Эччи</title>
+<style>
+/* Стили аналогичны vanilla.html, меняем только фон, можно под цвет жанра */
+body{font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;margin:0;padding:24px;color:#fff;
+background:url('https://cdn009.mndcdn.net/photo/1/4/5/d0907f5f5f7efebb8ddabc6d9e441d80_view.jpg') no-repeat center center fixed;background-size:cover;position:relative;}
+.container{max-width:980px;margin:0 auto;background: rgba(0,0,0,0.4);padding:20px;border-radius:12px;backdrop-filter: blur(6px);}
+h1{font-size:2rem;margin-bottom:16px;color:#ffd;text-shadow:2px 2px 6px rgba(0,0,0,0.8);}
+h3{font-size:1.2rem;margin-top:12px;color:#fff;text-shadow:1px 1px 3px rgba(0,0,0,0.7);background: rgba(0,0,0,0.3);display:inline-block;padding:4px 8px;border-radius:6px;}
+a.button{display:inline-block;margin-top:12px;padding:8px 12px;border-radius:8px;background:rgba(154,214,255,0.15);border:1px solid rgba(154,214,255,0.5);color:#9ad6ff;text-decoration:none;font-weight:600;}
+a.button:hover{background:rgba(154,214,255,0.25);transform:scale(1.05);}
+.droplet{position:absolute;background:rgba(255,255,255,0.6);pointer-events:none;border-radius:50%;mix-blend-mode:screen;}
+.liquiddroplet{border-radius:50% 70% 60% 40%;}
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>Этти</h1>
+  <h3>Этти (Ecchi)
+
+Этти — это жанр аниме и манги, в котором присутствует эротика и фансервис, но без явного секса. Он демонстрирует сексуальные намёки, комические или неловкие ситуации, случайные обнажения, панцушоты и двусмысленные позы, создавая лёгкую эротическую атмосферу. Главная цель — развлечь зрителя, вызвать смех и лёгкое возбуждение, не переходя в откровенные сцены.
+
+Название жанра происходит от английской буквы H (hentai), но этти остаётся мягким и юмористическим, часто используемым в школьных комедиях или романтических историях.
+
+Примеры произведений: Futari Ecchi, различные аниме и манги с фансервисом, где сюжет сочетает юмор и эротические намёки.</h3>
+  <img src="https://moregirls.org/data/media/68/hentai%20on%20moregirls%20(331).jpg" width="600" alt="Картинка">
+  <img src="https://cdn009.mndcdn.net/photo/f/6/c/3d914c99e6c97c3bd90239bed067984d_view.jpg" width="1000" alt="Картинка">
+  <br>
+  <a href="https://hentaiz.org/1778-komendant-obschezhitiya-bogin.html" class="button">Видосик</a>
+</div>
+<script>
+const dropletCount = 18; // чуть больше клякс, чтобы отличалось
+for(let i=0;i<dropletCount;i++){
+  const droplet=document.createElement('div'); droplet.className='droplet';
+  if(i%4===0) droplet.classList.add('liquiddroplet');
+  const size=Math.random()*50+20;
+  droplet.style.width=size+'px'; droplet.style.height=size+'px';
+  droplet.style.left=Math.random()*100+'vw'; droplet.style.top=Math.random()*100+'vh';
+  droplet.style.opacity=0.25+Math.random()*0.55;
+  droplet.style.transform=`rotate(${Math.random()*360}deg)`;
+  document.body.appendChild(droplet);
+}
+</script>
+</body>
+</html>

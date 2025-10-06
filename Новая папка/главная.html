@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Категории — Руководство</title>
+
+<style>
+:root {
+  --accent: #9ad6ff;
+  --text-color: #e0f0ff;
+  --muted: #a0b0c0;
+  --bg-image: url('https://photos.xgroovy.com/contents/albums/sources/101000/101401/97063.jpg');
+}
+
+body {
+  font-family: Inter, Segoe UI, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 24px;
+  color: var(--text-color);
+  background: var(--bg-image) no-repeat center center fixed;
+  background-size: cover;
+  overflow: hidden; /* чтобы лужи не вылезали за страницу */
+}
+
+.container { max-width: 980px; margin: 0 auto; }
+
+header { display: flex; align-items: center; margin-bottom: 20px; }
+header h1 {
+  font-size: clamp(1.8rem,5vw,2.2rem);
+  margin: 0;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+}
+
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.card {
+  background: linear-gradient(135deg, rgba(20,30,50,0.75), rgba(50,40,70,0.6), rgba(30,50,80,0.65));
+  background-size: 400% 400%;
+  animation: gradientShift 12s ease infinite;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
+  backdrop-filter: blur(8px);
+  transition: transform 0.3s, box-shadow 0.3s;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.75);
+}
+
+.cat {
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 8px;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
+}
+
+.card p {
+  margin: 0;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.note {
+  background: rgba(0,0,0,0.5);
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  color: var(--muted);
+  backdrop-filter: blur(4px);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+footer { 
+  margin-top: 20px; 
+  color: var(--muted);
+  font-size: 0.9rem; 
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.5); 
+}
+
+@media(max-width:500px){body{padding:16px;}}
+
+/* === Статичные лужи краски === */
+.paint {
+  position: absolute;
+  pointer-events: none;
+}
+</style>
+</head>
+<body><!-- Баннер сверху -->
+<div style="
+  width: 100%;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(8px);
+  padding: 12px 0;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff99cc;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+  border-bottom: 2px solid rgba(255,255,255,0.3);
+  margin-bottom: 20px;
+  border-radius: 8px;
+">
+  Автор устал
+</div>
+
+
+<div class="container">
+
+  <header>
+    <h1>Информационный обзор категорий</h1>
+  </header>
+
+  <div class="note">
+    <strong>Важно:</strong> сайт носит исключительно информационный и образовательный характер.
+  </div>
+
+  <section aria-label="Категории">
+    <div class="grid">
+
+      <a href="vanilla.html" class="card">
+        <div class="cat">Ванилла</div>
+        <p>Романтические и мягкие сюжеты с фокусом на отношениях.</p>
+      </a>
+
+      <a href="ecchi.html" class="card">
+        <div class="cat">Эччи</div>
+        <p>Легкие сексуальные шутки и фансервис.</p>
+      </a>
+
+      <a href="yaoi.html" class="card">
+        <div class="cat">Яой / BL</div>
+        <p>Романтика между мужскими персонажами.</p>
+      </a>
+
+      <a href="yuri.html" class="card">
+        <div class="cat">Юри / GL</div>
+        <p>Отношения между женскими персонажами.</p>
+      </a>
+
+      <a href="bdsm.html" class="card">
+        <div class="cat">BDSM</div>
+        <p>Ролевые игры и элементы доминирования.</p>
+      </a>
+
+      <a href="fantasy.html" class="card">
+        <div class="cat">Фэнтези / Sci-Fi</div>
+        <p>Сюжеты с магией, технологиями и мирами будущего.</p>
+      </a>
+
+      <a href="parody.html" class="card">
+        <div class="cat">Пародии / Комедия</div>
+        <p>Юмор и пародии на известные произведения.</p>
+      </a>
+
+      <a href="sliceoflife.html" class="card">
+        <div class="cat">Slice of Life</div>
+        <p>Будни, эмоции и развитие персонажей без акцента на экшене.</p>
+      </a>
+
+      <a href="loli.html" class="card">
+        <div class="cat">Лоли</div>
+        <p>Романтика и эротика с участием маленьких девочек.</p>
+      </a>
+
+      <a href="furry.html" class="card">
+        <div class="cat">Фурри</div>
+        <p>Антропоморфные персонажи и культура сообщества.</p>
+      </a>
+
+    </div>
+  </section>
+
+  <footer>
+    <div>Файл: <strong>index.html</strong></div>
+  </footer>
+</div>
+
+<!-- ===== JS для статичных луж ===== -->
+<script>
+const paintCount = 15; // количество луж
+for(let i=0;i<paintCount;i++){
+  const p = document.createElement('div');
+  p.className = 'paint';
+  const w = Math.random()*60 + 20;  // ширина от 20 до 80px
+  const h = w * (Math.random()*0.5 + 0.5); // высота пропорциональна ширине
+  p.style.width = w + 'px';
+  p.style.height = h + 'px';
+  p.style.left = Math.random() * 100 + 'vw';
+  p.style.top = Math.random() * 100 + 'vh';
+  p.style.background = `rgba(255,255,255,${Math.random()*0.4 + 0.2})`; // прозрачность
+  p.style.borderRadius = `${Math.random()*50 + 30}% ${Math.random()*50 + 30}% ${Math.random()*50 + 30}% ${Math.random()*50 + 30}%`;
+  p.style.transform = `rotate(${Math.random()*30-15}deg)`;
+  document.body.appendChild(p);
+}
+</script>
+
+</body>
+</html>
+
+
+
+
