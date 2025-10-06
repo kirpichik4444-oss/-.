@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Юри / GL</title>
+
+<style>
+/* ======== Основные стили страницы ======== */
+body{
+  font-family:Inter,Segoe UI,Helvetica,Arial,sans-serif;
+  margin:0;
+  padding:24px;
+  color:#fff;
+  /* Фон страницы — вставь свою ссылку ниже */
+  background:url('https://ei.phncdn.com/videos/202411/18/460695791/original/(m=eaSaaTbaAaaaa)(mh=YWuqDpUytJB7BI3F)16.jpg') no-repeat center center fixed;
+  background-size:cover;
+  position:relative;
+}
+
+/* Контейнер для текста и контента */
+.container{
+  max-width:980px;
+  margin:0 auto;
+  background: rgba(0,0,0,0.4); /* затемнение для читаемости текста */
+  padding:20px;
+  border-radius:12px;
+  backdrop-filter: blur(6px);
+}
+
+/* Заголовок */
+h1{
+  font-size:2rem;
+  margin-bottom:16px;
+  color:#ffd;
+  text-shadow:2px 2px 6px rgba(0,0,0,0.8);
+}
+
+/* Подзаголовок */
+h3{
+  font-size:1.2rem;
+  margin-top:12px;
+  color:#fff;
+  text-shadow:1px 1px 3px rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.3);
+  display:inline-block;
+  padding:4px 8px;
+  border-radius:6px;
+}
+
+/* Кнопка "Видосик" */
+a.button{
+  display:inline-block;
+  margin-top:12px;
+  padding:8px 12px;
+  border-radius:8px;
+  background:rgba(154,214,255,0.15);
+  border:1px solid rgba(154,214,255,0.5);
+  color:#9ad6ff;
+  text-decoration:none;
+  font-weight:600;
+}
+a.button:hover{
+  background:rgba(154,214,255,0.25);
+  transform:scale(1.05);
+}
+
+/* ======== Кляксы и "лужи" ======== */
+.droplet{
+  position:absolute;
+  background:rgba(255,255,255,0.6);
+  pointer-events:none;
+  border-radius:50%;
+  mix-blend-mode:screen;
+}
+.liquiddroplet{
+  border-radius:50% 70% 60% 40%;
+}
+</style>
+</head>
+
+<body>
+<div class="container">
+  <!-- Заголовок страницы -->
+  <h1>Юри / GL</h1>
+
+  <!-- Подзаголовок -->
+  <h3>Жанр, посвящённый романтическим и эмоциональным отношениям между женскими персонажами.</h3>
+
+  <!-- Основное описание жанра -->
+  <p>
+    Юри (также известный как Girls' Love или GL) — жанр аниме и манги, 
+    изображающий эмоциональные, романтические и иногда интимные отношения между девушками. 
+    Часто в таких произведениях акцент делается на чувствах, дружбе и взаимопонимании, 
+    а не на откровенных сценах. 
+    Главная идея жанра — показать тонкую эмоциональную связь, развитие персонажей и 
+    их внутренние переживания.
+  </p>
+
+  <p>
+    Современные произведения в жанре юри варьируются от лёгких и трогательных историй до 
+    драматичных сюжетов с глубокими переживаниями. 
+    Жанр стал популярен благодаря своей искренности и вниманию к чувствам героинь.
+  </p>
+
+  <!-- Картинки -->
+  <img src="https://xxx-premium.com/uploads/posts/2015-08/1440077170_001.jpg" height="500" alt="Юри арт">
+  <img src="https://pa1.aminoapps.com/7021/9eaf46f3939179b7bf85ee96b9414df1c0553c19r1-540-304_hq.gif" width="1000" wi alt="Юри арт">
+
+  <!-- Кнопка -->
+  <br>
+  <a href="https://noodlemagazine.com/watch/-112475447_456239027" class="button">МЭБЕВЕ</a>
+</div>
+
+<script>
+/* ======== Скрипт для создания клякс ======== */
+const dropletCount = 22; // количество клякс
+for(let i=0;i<dropletCount;i++){
+  const droplet=document.createElement('div');
+  droplet.className='droplet';
+  if(i%4===0) droplet.classList.add('liquiddroplet'); // некоторые кляксы делаем неровными
+
+  const size=Math.random()*70+25; // размер от 25 до 95px
+  droplet.style.width=size+'px';
+  droplet.style.height=size+'px';
+  droplet.style.left=Math.random()*100+'vw';
+  droplet.style.top=Math.random()*100+'vh';
+  droplet.style.opacity=0.25+Math.random()*0.4;
+  droplet.style.transform=`rotate(${Math.random()*360}deg)`;
+
+  document.body.appendChild(droplet);
+}
+</script>
+</body>
+</html>
